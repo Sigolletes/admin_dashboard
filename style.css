@@ -20,7 +20,7 @@ body {
     grid-template: 150px 1fr / 200px 1fr;
 }
 
-i {
+#sidebar i {
     color: var(--color2);
 }
 
@@ -49,7 +49,7 @@ i {
     background-color: var(--color1);
     color: var(--color2);
     padding: 5%;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    box-shadow: inset 0 0 20px 20px rgba(37, 69, 60, 0.3);
     
     grid-area: 1 / 1 / 3 / 2;
 
@@ -83,7 +83,7 @@ a {
 #header {
     background-color: var(--color2);
     grid-area: 1 / 2 / 2 / 3;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    box-shadow: inset 0 0 20px 20px rgba(228, 178, 164, 0.3);
 
     display: grid;
     grid-template: 1fr 2fr / 3fr 2fr;
@@ -188,7 +188,7 @@ a {
     gap: 30px;
 }
 
-#projectsTitle {
+.title {
     grid-area: 1 / 1 / 2 / 3;
 }
 
@@ -196,16 +196,86 @@ a {
     background-color: var(--color2);
     border-radius: 7px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border-left: 5px solid var(--color1);
+
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.projectButtons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    
+    gap: 15px;
+    padding-right: 10px;
+}
+
+.projectButtons i {
+    color: black;
 }
 
 #announcements {
     grid-area: 1 / 2 / 2 / 3;
+    display: grid;
+    grid-template: 1fr 5fr / 1fr;
+}
+
+#announcementsBox {
     background-color: var(--color2);
+    border-radius: 7px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 17px;
+}
+
+.announcement:not(:last-child) {
+    border-bottom: 1px solid var(--color3);
+}
+
+.announcementText {
+    font-size: 13px;
 }
 
 #trending {
     grid-area: 2 / 2 / 3 / 3;
-    background-color: var(--color2);
+    display: grid;
+    grid-template: 1fr 5fr / 1fr;
 }
 
+#trendingBox {
+    background-color: var(--color2);
+    border-radius: 7px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    padding: 13px;
+}
 
+.trendy {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 4fr;
+    column-gap: 10px;
+    
+}
+
+.trendyImg {
+    grid-area: 1 / 1 / 3 / 2;
+    align-self: center;
+}
+
+.trendyTitle {
+    grid-area: 1 / 2 / 2 / 3;
+    align-self: end;
+}
+
+.trendyText {
+    grid-area: 2 / 2 / 3 / 3;
+    align-self: start;
+    
+}
